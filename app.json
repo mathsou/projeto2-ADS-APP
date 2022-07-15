@@ -30,7 +30,7 @@
           "apiKey": "AIzaSyBtdZqzeU3_ImHSHGHJytSBwcKzneIWVqY"
         }
       },
-      "package": "com.yourcompany.mototche"
+      "package": "com.tchedelivery.mototche"
     },
     "web": {
       "favicon": "./assets/favicon.png"

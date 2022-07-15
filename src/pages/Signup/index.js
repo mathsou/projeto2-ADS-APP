@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import { KeyboardAvoidingView, Platform, ScrollView, View } from "react-native";
 import {
   KeyboardView,
   Title,
   Container,
   Input,
-  ButtonTitle,
-  SubTitle,
   ButtonSubmit,
   TextSubmit,
 } from "./styles";
@@ -52,50 +51,59 @@ function Signup({ navigation }) {
     }
   };
   return (
-    <KeyboardView>
+    <View
+      style={{
+        width: "100%",
+      }}
+    >
       <Header />
-      <Container>
-        <Title>Entrar em sua conta</Title>
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="Primeiro nome"
-          onChangeText={(value) => setName(value)}
-        />
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="Sobrenome"
-          onChangeText={(value) => setLastname(value)}
-        />
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="E-mail"
-          onChangeText={(value) => setEmail(value)}
-        />
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="Telefone"
-          onChangeText={(value) => setPhone(value)}
-        />
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="Senha"
-          onChangeText={(value) => setPassword(value)}
-          secureTextEntry={true}
-        />
-        <Input
-          placeholderTextColor="#919191"
-          placeholder="Repetir senha"
-          onChangeText={(value) => setRepeatPassword(value)}
-          secureTextEntry={true}
-        />
-        <ButtonSubmit title="Entrar" onPress={() => cadastrar()}>
-          <TextSubmit>Cadastrar</TextSubmit>
-        </ButtonSubmit>
-        <ButtonSubmit title="Voltar" onPress={() => voltar()}>
-          <TextSubmit>Voltar</TextSubmit>
-        </ButtonSubmit>
-      </Container>
-    </KeyboardView>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "IOS" ? "padding" : "height"}
+        keyboardVerticalOffset={20}
+      >
+        <ScrollView style={{ width: "100%" }}>
+          <Title>Entrar em sua conta</Title>
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="Primeiro nome"
+            onChangeText={(value) => setName(value)}
+          />
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="Sobrenome"
+            onChangeText={(value) => setLastname(value)}
+          />
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="E-mail"
+            onChangeText={(value) => setEmail(value)}
+          />
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="Telefone"
+            onChangeText={(value) => setPhone(value)}
+          />
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="Senha"
+            onChangeText={(value) => setPassword(value)}
+            secureTextEntry={true}
+          />
+          <Input
+            placeholderTextColor="#919191"
+            placeholder="Repetir senha"
+            onChangeText={(value) => setRepeatPassword(value)}
+            secureTextEntry={true}
+          />
+          <ButtonSubmit title="Entrar" onPress={() => cadastrar()}>
+            <TextSubmit>Cadastrar</TextSubmit>
+          </ButtonSubmit>
+          <ButtonSubmit title="Voltar" onPress={() => voltar()}>
+            <TextSubmit>Voltar</TextSubmit>
+          </ButtonSubmit>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </View>
   );
 }
 

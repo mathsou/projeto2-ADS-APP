@@ -8,6 +8,7 @@ export const KeyboardView = styled.View`
 `;
 
 export const Title = styled.Text`
+  margin: 0 auto;
   font-size: 27px;
   color: #000000;
   margin-bottom: 30px;
@@ -34,6 +35,7 @@ export const SubTitle = styled.Text`
 `;
 
 export const Input = styled.TextInput`
+  margin: 0 auto;
   background: #ffffff;
   margin-bottom: 30px;
   padding: 15px 20px;
@@ -43,6 +45,7 @@ export const Input = styled.TextInput`
 `;
 
 export const ButtonSubmit = styled.TouchableOpacity`
+  margin: 0 auto;
   background-color: #c90e0d;
   padding: 15px 20px;
   border-radius: 9px;
