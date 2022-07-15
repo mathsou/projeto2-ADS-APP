@@ -9,14 +9,20 @@ import {
     ButtonLogin, 
     TextLogin
 } from './styles';
-import Logo from '../../src/assets/motoboy2.png';
+import Logo from '../../assets/images/motoboy2.png';
 
 function Preloader({navigation}) {
-
     const entrar = () => {
         navigation.reset({
             index: 0,
             routes: [{name: "Signin"}]
+        })
+    }
+
+    const cadastrar = () => {
+        navigation.reset({
+            index: 0,
+            routes: [{name: "Signup"}]
         })
     }
 
@@ -28,7 +34,7 @@ function Preloader({navigation}) {
                     source={Logo}
                 />
             </Container>
-            <ButtonSubmit>
+            <ButtonSubmit onPress={() => cadastrar()}>
                 <TextSubmit>Cadastrar</TextSubmit>
             </ButtonSubmit>
             <ButtonLogin title="Entrar" onPress={() => entrar()}>
