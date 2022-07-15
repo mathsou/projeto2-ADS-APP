@@ -43,7 +43,7 @@ function Signin({ navigation }) {
         } else {
           window.alert(login.data.msg);
         }
-      } catch {
+      } catch (err) {
         window.alert("E-mail ou senha incorreto");
       }
     } else {

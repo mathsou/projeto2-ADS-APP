@@ -29,7 +29,8 @@
         "googleMaps": {
           "apiKey": "AIzaSyBtdZqzeU3_ImHSHGHJytSBwcKzneIWVqY"
         }
-      }
+      },
+      "package": "com.yourcompany.mototche"
     },
     "web": {
       "favicon": "./assets/favicon.png"
